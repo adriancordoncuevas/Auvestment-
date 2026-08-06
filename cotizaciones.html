@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auvestment | Precios y Cotizaciones en Directo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- CABECERA -->
+    <header class="navbar">
+        <div class="logo-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">▲</span>
+                <span class="logo-text">AUVESTMENT</span>
+            </a>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="cotizaciones.html" class="active">Precios</a>
+            <a href="graficos.html">Gráficos</a>
+            <a href="guias.html">Guías</a>
+            <a href="refinerias.html">Refinerías</a>
+            <a href="noticias.html">Noticias</a>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO COTIZACIONES -->
+    <main class="container">
+        <h1 class="section-title">Cotizaciones del Mercado en Directo</h1>
+        
+        <!-- WIDGET DE MERCADO EN TIEMPO REAL (Ejemplo de TradingView para Oro y Plata) -->
+        <div class="live-ticker-container" style="background-color: #111827; border: 1px solid #1f2937; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem;">
+            <div class="tradingview-widget-container">
+                <div class="tradingview-widget-container__widget"></div>
+                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                {
+                "symbols": [
+                  {"proName": "OANDA:XAUUSD", "title": "Oro (USD)"},
+                  {"proName": "FX_IDC:XAUEUR", "title": "Oro (EUR)"},
+                  {"proName": "OANDA:XAGUSD", "title": "Plata (USD)"},
+                  {"proName": "FX_IDC:XAGEUR", "title": "Plata (EUR)"}
+                ],
+                "showSymbolLogo": true,
+                "colorTheme": "dark",
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "locale": "es"
+                }
+                </script>
+            </div>
+        </div>
+
+        <!-- TARJETAS DE REFERENCIA SIMÉTRICAS -->
+        <div class="prices-grid">
+            <div class="price-card">
+                <span class="metal-pair">ORO / USD</span>
+                <span class="currency-label">Mercado Internacional</span>
+                <div class="price-value" id="gold-usd">En directo...</div>
+            </div>
+
+            <div class="price-card">
+                <span class="metal-pair">PLATA / USD</span>
+                <span class="currency-label">Mercado Internacional</span>
+                <div class="price-value" id="silver-usd">En directo...</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 AUVESTMENT. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
