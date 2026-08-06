@@ -1,0 +1,114 @@
+/* Elegante Paleta Oscura */
+:root {
+    --bg-body: #0a0a0a;
+    --bg-card: #121212;
+    --border-card: #2a2a2a;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent-gold: #d4af37;
+    --hover-gold: #f4d03f;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabecera */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    border-bottom: 1px solid var(--border-card);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--accent-gold);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-gold);
+}
+
+.main-content {
+    padding: 3rem 5%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-section h1 {
+    color: var(--accent-gold);
+    font-size: 2.5rem;
+}
+
+/* Cuadrícula personalizada */
+.custom-sections-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.5rem;
+}
+
+.card-section {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 8px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    grid-column: span 2;
+}
+
+.card-section:nth-child(4),
+.card-section:nth-child(5) {
+    grid-column: span 3;
+}
+
+.card-section:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+}
+
+.card-section h2 {
+    color: var(--accent-gold);
+    margin-top: 0;
+}
+
+.card-section p {
+    color: var(--text-secondary);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border-card);
+}
